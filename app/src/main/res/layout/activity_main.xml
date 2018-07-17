@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.forevc.hongbao.MainActivity">
+
+    <!--红包页面-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/user"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@mipmap/user"/>
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/user"
+            android:layout_marginLeft="60dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="8888888.6668888"/>
+
+        <ImageButton
+            android:id="@+id/message"
+            android:src="@mipmap/msg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp">
+        <com.tencent.tencentmap.mapsdk.map.MapView
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+
+    <!--我的钱包-->
+    <RelativeLayout
+        android:id="@+id/my_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:text="全国"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="兑换记录"/>
+
+        <WebView
+            android:id="@+id/web_view_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp"/>
+
+    </RelativeLayout>
+
+    <!--bottom-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/button_hongbao"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginLeft="55dp"
+            android:background="@null"
+            android:src="@mipmap/ic_tab_hongbao_selected"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_hongbao"
+            android:textSize="10dp"
+            android:textColor="#9c9c9c"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="-13dp"
+            android:text="收红包"/>
+
+        <ImageButton
+            android:id="@+id/button_wallet"
+            android:layout_alignParentRight="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginRight="55dp"
+            android:background="@null"
+            android:src="@mipmap/ic_tab_wallet_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_wallet"
+            android:layout_alignParentRight="true"
+            android:textSize="10dp"
+            android:textColor="#9c9c9c"
+            android:layout_marginRight="58dp"
+            android:layout_marginTop="-13dp"
+            android:text="我的钱包"/>
+
+    </RelativeLayout>
+
+</android.widget.RelativeLayout>

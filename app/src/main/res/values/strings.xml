@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">hongbao</string>
+    <string name="title_activity_wallet">WalletActivity</string>
+</resources>
