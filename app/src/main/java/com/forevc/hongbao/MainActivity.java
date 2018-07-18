@@ -44,7 +44,7 @@ public class MainActivity extends MapActivity implements TencentLocationListener
         buttonWallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                laodWalletWebView();
+                loadWalletWebView();
                 // 隐藏标题栏和地图栏
                 findViewById(R.id.title).setVisibility(View.INVISIBLE);
                 findViewById(R.id.map_view).setVisibility(View.INVISIBLE);
@@ -71,7 +71,7 @@ public class MainActivity extends MapActivity implements TencentLocationListener
 
     }
 
-    private void laodWalletWebView() {
+    private void loadWalletWebView() {
         WebView view = (WebView) findViewById(R.id.web_view_wallet);
         view.loadUrl("file:///android_asset/wallet.html");
     }
