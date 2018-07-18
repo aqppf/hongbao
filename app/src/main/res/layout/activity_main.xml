@@ -53,50 +53,18 @@
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp">
         <com.tencent.tencentmap.mapsdk.map.MapView
-            android:id="@+id/mapview"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
     </RelativeLayout>
 
     <!--我的钱包-->
-    <RelativeLayout
-        android:id="@+id/my_wallet"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        android:layout_marginBottom="50dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:text="全国"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="15dp"
-            android:layout_alignParentRight="true"
-            android:text="兑换记录"/>
-
-        <WebView
-            android:id="@+id/web_view_wallet"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="50dp"/>
-
-    </RelativeLayout>
+     <include layout="@layout/wallet_layout"/>
 
     <!--bottom-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="#FFFFFF"
         android:layout_alignParentBottom="true">
 
         <ImageButton

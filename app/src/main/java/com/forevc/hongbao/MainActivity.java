@@ -27,15 +27,14 @@ public class MainActivity extends MapActivity implements TencentLocationListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mapView=(MapView)findViewById(R.id.mapview);
-        mapView.onCreate(savedInstanceState);
 
+        // 请求定位权限
         requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
                     Manifest.permission.ACCESS_COARSE_LOCATION}, 0);
 
+        // 腾讯定位请求
         TencentLocationRequest request = TencentLocationRequest.create();
         request.setInterval(180000);
-
         TencentLocationManager locationManager = TencentLocationManager.getInstance(getApplicationContext());
         locationManager.requestLocationUpdates(request, this);
 
@@ -95,7 +94,6 @@ public class MainActivity extends MapActivity implements TencentLocationListener
 
     @Override
     public void onStatusUpdate(String s, int i, String s1) {
-
         // todo
     }
 }
