@@ -28,6 +28,9 @@ public class MainActivity extends MapActivity implements TencentLocationListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mapView = (MapView) findViewById(R.id.mapview);
+        mapView.onCreate(savedInstanceState);
+
         // 请求定位权限
         requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
                     Manifest.permission.ACCESS_COARSE_LOCATION}, 0);

@@ -14,10 +14,10 @@
 
         <ImageButton
             android:id="@+id/user"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="18dp"
             android:scaleType="fitXY"
             android:background="@null"
             android:src="@mipmap/user"/>
@@ -36,13 +36,13 @@
         <ImageButton
             android:id="@+id/message"
             android:src="@mipmap/msg"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
             android:scaleType="fitXY"
             android:background="@null"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"/>
+            android:layout_marginRight="18dp"/>
 
     </RelativeLayout>
 
@@ -53,6 +53,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp">
         <com.tencent.tencentmap.mapsdk.map.MapView
+            android:id="@+id/mapview"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
     </RelativeLayout>
