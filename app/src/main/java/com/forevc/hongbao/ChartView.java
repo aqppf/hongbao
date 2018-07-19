@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.forevc.util.DateUtil;
 import com.forevc.util.NumUtil;
 
 import java.nio.FloatBuffer;
@@ -80,11 +81,11 @@ public class ChartView extends View {
         paint.setTextAlign(Paint.Align.LEFT);
         paint.setStyle(Paint.Style.FILL);
 
-        canvas.drawText("7.15", x1 - padding/2, bottom_y, paint);
-        canvas.drawText("7.16", x2 - padding/2, bottom_y, paint);
-        canvas.drawText("7.17", x3 - padding/2, bottom_y, paint);
-        canvas.drawText("7.18", x4 - padding/2, bottom_y, paint);
-        canvas.drawText("7.19", x5 - padding/2, bottom_y, paint);
+        canvas.drawText(DateUtil.today(-4), x1 - padding/2, bottom_y, paint);
+        canvas.drawText(DateUtil.today(-3), x2 - padding/2, bottom_y, paint);
+        canvas.drawText(DateUtil.today(-2), x3 - padding/2, bottom_y, paint);
+        canvas.drawText(DateUtil.today(-1), x4 - padding/2, bottom_y, paint);
+        canvas.drawText(DateUtil.today(0), x5 - padding/2, bottom_y, paint);
 
         canvas.drawText(Float.toString(price[0]), x1 - 80, y1 - 20, paint);
         paint.setTextAlign(Paint.Align.RIGHT);
