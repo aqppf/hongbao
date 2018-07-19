@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">hongbao</string>
+    <string name="app_name">红包多多</string>
     <string name="title_activity_wallet">WalletActivity</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
 </resources>
