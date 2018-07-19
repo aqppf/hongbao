@@ -32,7 +32,10 @@
 
     <!--内容页面-->
     <ScrollView
+        android:id="@+id/scrollview_wallet"
         android:layout_width="match_parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
         android:translationZ="-100dp"
         android:layout_height="wrap_content">
     <LinearLayout
@@ -81,6 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
+            android:textSize="12dp"
             android:text="我的红包股价 = 今日红包股价 × 我的红包个数"/>
 
         <RelativeLayout
@@ -120,6 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/corner_radius"
+            android:textColor="@color/colorAccent"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
@@ -200,6 +205,15 @@
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="160dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:textColor="@color/colorAccent"
+            android:textSize="18dp"
+            android:text="红包股问答"
+            android:gravity="center_horizontal"/>
 
         <WebView
             android:id="@+id/web_view_wallet"

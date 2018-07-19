@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 
@@ -24,6 +25,7 @@ public class MainActivity extends MapActivity implements TencentLocationListener
 
     MapView mapView = null;
     TextView cityView = null;
+    ScrollView scrollWallet = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,8 @@ public class MainActivity extends MapActivity implements TencentLocationListener
         TencentLocationManager locationManager = TencentLocationManager.getInstance(getApplicationContext());
         locationManager.requestLocationUpdates(request, this);
 
+        scrollWallet = (ScrollView) findViewById(R.id.scrollview_wallet);
+
         final ImageButton buttonWallet = (ImageButton)findViewById(R.id.button_wallet);
         final ImageButton buttonHongBao = (ImageButton)findViewById(R.id.button_hongbao);
         buttonWallet.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +60,7 @@ public class MainActivity extends MapActivity implements TencentLocationListener
                 findViewById(R.id.map_view).setVisibility(View.INVISIBLE);
                 // 显示我的钱包
                 findViewById(R.id.my_wallet).setVisibility(View.VISIBLE);
+                scrollWallet.scrollTo(0, 0);
                 // 改变按钮样式
                 buttonWallet.setImageResource(R.mipmap.ic_tab_wallet_selected);
                 buttonHongBao.setImageResource(R.mipmap.ic_tab_hongbao_normal);
