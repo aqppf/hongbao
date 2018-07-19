@@ -46,20 +46,54 @@
 
     </RelativeLayout>
 
+    <!--地图页面-->
     <RelativeLayout
         android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp">
+
         <com.tencent.tencentmap.mapsdk.map.MapView
             android:id="@+id/mapview"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="9dp"
+            android:background="@mipmap/lord_bg_box_enterance"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="10dp"
+            android:text="城市格子"/>
+
+        <TextView
+            android:id="@+id/text_view_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="7dp"
+            android:text="上海市浦东新区"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="@mipmap/hongbao_qhb_ic_make"/>
     </RelativeLayout>
 
     <!--我的钱包-->
-     <include layout="@layout/wallet_layout"/>
+    <include layout="@layout/wallet_layout"/>
 
     <!--bottom-->
     <RelativeLayout

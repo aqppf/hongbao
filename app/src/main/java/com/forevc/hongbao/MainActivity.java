@@ -17,11 +17,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 public class MainActivity extends MapActivity implements TencentLocationListener {
 
-    MapView mapView=null;
+    MapView mapView = null;
+    TextView cityView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class MainActivity extends MapActivity implements TencentLocationListener
 
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.onCreate(savedInstanceState);
+
+        cityView = (TextView) findViewById(R.id.text_view_city);
 
         // 请求定位权限
         requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
@@ -87,12 +91,12 @@ public class MainActivity extends MapActivity implements TencentLocationListener
         tencentMap.setCenter(position);
         tencentMap.setZoom(15);
 
-        Marker marker = tencentMap.addMarker(new MarkerOptions()
+        tencentMap.addMarker(new MarkerOptions()
                 .position(position)
-                .title(tencentLocation.getName())
                 .anchor(0.5f, 0.5f)
                 .icon(BitmapDescriptorFactory.defaultMarker()));
-        marker.showInfoWindow();
+
+        cityView.setText(tencentLocation.getCity());
     }
 
     @Override
