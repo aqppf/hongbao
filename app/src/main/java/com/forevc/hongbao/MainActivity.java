@@ -105,7 +105,7 @@ public class MainActivity extends MapActivity implements TencentLocationListener
                 .anchor(0.5f, 0.5f)
                 .icon(BitmapDescriptorFactory.defaultMarker()));
 
-        cityView.setText(tencentLocation.getCity());
+        cityView.setText(tencentLocation.getAddress());
     }
 
     @Override

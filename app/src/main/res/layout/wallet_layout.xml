@@ -129,11 +129,11 @@
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="39dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="-10dp"
             android:translationZ="999dp"
-            android:text="涨幅 +2.2356532%"/>
+            android:text="涨幅 +2.235653%"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
