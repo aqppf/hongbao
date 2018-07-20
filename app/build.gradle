@@ -29,4 +29,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/TencentMapSDK_Raster_v_1.2.8.1.c02ec64.jar')
     compile files('libs/TencentLocationSdk_v6.2.5.3_r15b3b3cc_20171103_115903.jar')
+    implementation 'com.android.support:support-v4:25.4.0'
 }

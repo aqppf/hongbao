@@ -6,18 +6,15 @@ import com.tencent.map.geolocation.TencentLocationManager;
 import com.tencent.map.geolocation.TencentLocationRequest;
 import com.tencent.mapsdk.raster.model.BitmapDescriptorFactory;
 import com.tencent.mapsdk.raster.model.LatLng;
-import com.tencent.mapsdk.raster.model.Marker;
 import com.tencent.mapsdk.raster.model.MarkerOptions;
 import com.tencent.tencentmap.mapsdk.map.MapActivity;
 import com.tencent.tencentmap.mapsdk.map.MapView;
 import com.tencent.tencentmap.mapsdk.map.TencentMap;
 
 import android.Manifest;
-import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
-import android.view.KeyEvent;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageButton;
@@ -42,8 +39,9 @@ public class MainActivity extends MapActivity implements TencentLocationListener
         cityView = (TextView) findViewById(R.id.text_view_city);
 
         // 请求定位权限
-        requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION}, 0);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 0);
+        }
 
         // 腾讯定位请求
         TencentLocationRequest request = TencentLocationRequest.create();
