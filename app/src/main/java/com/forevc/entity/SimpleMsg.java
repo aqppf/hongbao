@@ -6,12 +6,19 @@ public class SimpleMsg implements Serializable {
 
     private String title;
     private String content;
+    private Long time;
 
     public SimpleMsg(String title, String content) {
         this.title = title;
         this.content = content;
     }
 
+    public Long getTime() {
+        return time;
+    }
+    public void setTime(Long time) {
+        this.time = time;
+    }
     public String getTitle() {
         return title;
     }
