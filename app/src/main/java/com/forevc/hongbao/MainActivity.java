@@ -12,6 +12,7 @@ import com.tencent.tencentmap.mapsdk.map.MapView;
 import com.tencent.tencentmap.mapsdk.map.TencentMap;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -79,6 +80,15 @@ public class MainActivity extends MapActivity implements TencentLocationListener
                 // 改变按钮样式
                 buttonWallet.setImageResource(R.mipmap.ic_tab_wallet_normal);
                 buttonHongBao.setImageResource(R.mipmap.ic_tab_hongbao_selected);
+            }
+        });
+
+        // 跳转到消息页面
+        ImageButton msgButton = (ImageButton) findViewById(R.id.message);
+        msgButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MessageActivity.class));
             }
         });
 
